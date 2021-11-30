@@ -1,0 +1,36 @@
+
+html{scroll-behavior: smooth;}
+
+.button-ontop{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    text-decoration: 0;
+    font-size: 50px;
+    background: $primary_color;
+    border: 3px solid $primary_color;
+    color: #fff;
+    padding: 20px;
+    border-radius: 100%;
+    margin: 0 auto;
+    line-height: .5em;
+    transition: .5 all ease-in-out;
+
+    @media (max-width: 576px) {
+        right: 15px;
+        bottom: 15px;
+        font-size: 32px;
+        padding: 15px;
+    }
+
+    &:hover{
+        box-shadow: 0px 27px 20px -23px $primary_color;
+        animation: move-up-down 1s infinite  alternate;
+    }
+}
+
+// Animation Up-Down
+@keyframes move-up-down {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
